@@ -1,0 +1,30 @@
+.detalle-producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos */
+    padding: 20px; /* Espaciado interno */
+}
+
+.producto-card {
+    border: 1px solid #ccc; /* Borde de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno de la tarjeta */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-bottom: 20px; /* Espacio inferior para separar del botón */
+    width: 300px; /* Ancho fijo para la tarjeta */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+}
+
+.btn-volver {
+    padding: 10px 20px; /* Espacio interno */
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.btn-volver:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar por encima */
+}

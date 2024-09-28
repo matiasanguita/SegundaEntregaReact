@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.navbar {
+    display: flex;
+    height: 150px; /* Altura del navbar */
+    background-color: bisque; /* Color de fondo del navbar */
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Para posicionar los enlaces en dispositivos móviles */
+    padding: 1rem;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center; 
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex; /* Muestra los enlaces en fila */
+}
+
+.navbar-items {
+    margin-right: 1rem; /* Espaciado entre los elementos */
+    padding: 0.5rem;
+}
+
+.navbar a {
+    color: brown; /* Color del texto de los enlaces */
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: rgb(255, 71, 71); /* Color al pasar el mouse */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.menu-toggle {
+    display: none; /* Ocultar el botón de menú en pantallas grandes */
+    flex-direction: column; /* Coloca las barras en columna */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.bar {
+    height: 4px; /* Altura de las barras del menú */
+    width: 25px; /* Ancho de las barras */
+    background-color: brown; /* Color de las barras */
+    margin: 3px 0; /* Espaciado entre las barras */
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Ocultar enlaces en pantallas pequeñas */
+        flex-direction: column; /* Coloca los enlaces en columna */
+        position: absolute; /* Permite que el menú se superponga */
+        top: 100%; /* Ajusta la posición del menú desplegable */
+        left: 0;
+        right: 0;
+        background-color: bisque; /* Color de fondo del menú desplegable */
+        z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+    }
+
+    .navbar-links.active {
+        display: flex; /* Muestra los enlaces cuando el menú está activo */
+    }
+
+    .menu-toggle {
+        display: flex; /* Muestra el menú en pantallas pequeñas */
+    }
+}
